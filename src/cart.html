@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cart</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class=".container">
+      <div class="cart-container">
+        <div class="cart-product">
+          <div
+            class="title-cart fs-20 fw-400 d-flex align-items-center justify-content-between"
+          >
+            <p>PRODUCT NAME</p>
+            <p>PRICE</p>
+            <p>QUANTITY</p>
+            <p>TOTAL</p>
+            <p class="space-name"></p>
+          </div>
+          <div class="content-cart fs-16 fw-400 d-flex flex-column gap-3">
+            <!--  -->
+            <template id="item-cart">
+              <div
+                class="product-in-cart d-flex align-items-center justify-content-start"
+              >
+                <div
+                  class="pr-cart d-flex justify-content-between align-items-center gap-3"
+                >
+                  <div class="img-thumbail-cart">
+                    <img src="${ product.img }" alt="ss" />
+                  </div>
+                  <div class="name-pr-cart"><p>${ product.name }</p></div>
+                </div>
+                <div class="price-cart">
+                  <p>$<span class="price" id="price">${ product.price }</span></p>
+                </div>
+                <div class="qty-cart">
+                    <button type="button" class="btn btn-secondary btn-down">
+                      <i class="fas fa-minus"></i>
+                    </button>
+                    <input
+                      class="number-qty"
+                      value="${ quantity }"
+                      type="number"
+                      id="input"
+                      readonly=""
+                    />
+                    <button type="button" class="btn btn-secondary btn-up">
+                      <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+                <div class="total-cart">
+                  <p>$<span class="total" id="total">3.25</span></p>
+                </div>
+                <div class="trash"><i class="bi bi-trash"></i></div>
+              </div>
+            </template>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="js/index.js"></script>
+    <script type="module" src="js/cart.js"></script>
+  </body>
+</html>

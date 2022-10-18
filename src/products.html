@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div
+        class="list-fruit-product d-flex justify-content-center align-items-center gap-3 flex-wrap gap-xl-4 gap-xxl-5"
+      ></div>
+    </div>
+
+    <div class="container"><a href="cart.html">cart</a></div>
+
+    <script type="text/html" id="product-pr">
+      <!-- product gird -->
+      <div
+        class="fruit-product d-flex flex-column justify-content-center align-items-center gap-3 position-relative"
+      >
+        <div class="img-thumb-pr">
+          <img src="${img}" alt="sds" />
+        </div>
+        <div class="name-pr-fr">
+          <a
+            href="productdetail.html?id=${ id }"
+            class="fs-20 fw-400 text-decoration-none text-black"
+            >${name}</a
+          >
+        </div>
+        <div class="price-pr-fr">
+          <span class="fs-16 fw-400 text-green">$ ${price}</span>
+        </div>
+        <div class="add-cart position-absolute">
+          <div id="checkout" class="btn-add button button-2">Add to cart</div>
+        </div>
+      </div>
+    </script>
+    <script type="module" src="js/index.js"></script>
+  </body>
+</html>

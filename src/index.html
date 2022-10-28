@@ -4,6 +4,13 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+      integrity="sha512-c42qTSw/wPZ3/5LBzD+Bw5f7bSF2oxou6wEb+I/lqeaKV5FDIfMvvRp772y4jcJLKuGUOpbJMdg/BTl50fJYAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <title>Test App</title>
   </head>
   <body>
@@ -16,6 +23,106 @@
     <div class="container"><a href="cart.html">cart</a></div>
     <div class="container"><a href="products.html">product</a></div>
 
+    <!-- sldier -->
+    <div class="slider position-relative">
+      <div class="position-relative">
+        <img
+          src="https://tuyenmr.github.io/tuyenmr/tuyenmr/images/Slider_01.jpg"
+          alt=""
+        />
+        <div class="text-animation">
+          <h1
+            class="animate__animated"
+            data-animation-in="animate__fadeInDown"
+            data-delay-in="0"
+          >
+            Title Title Title Title 1
+          </h1>
+          <br />
+          <h3
+            class="animate__animated"
+            data-animation-in="animate__fadeInRight"
+            data-delay-in="0.2"
+          >
+            Content Content Content Content Content Content Content
+          </h3>
+        </div>
+      </div>
+      <div class="position-relative">
+        <img
+          src="https://tuyenmr.github.io/tuyenmr/tuyenmr/images/Slider_02.jpg"
+          alt=""
+        />
+        <div class="text-animation">
+          <h1
+            class="animate__animated"
+            data-animation-in="animate__fadeInDown"
+            data-delay-in="0"
+          >
+            Title Title Title Title 2
+          </h1>
+          <br />
+          <h3
+            class="animate__animated"
+            data-animation-in="animate__fadeInRight"
+            data-delay-in="0.2"
+          >
+            Content Content Content Content Content Content Content
+          </h3>
+        </div>
+      </div>
+      <div class="position-relative">
+        <img
+          src="https://tuyenmr.github.io/tuyenmr/tuyenmr/images/Slider_04.jpg"
+          alt=""
+        />
+        <div class="text-animation">
+          <h1
+            class="animate__animated"
+            data-animation-in="animate__fadeInDown"
+            data-delay-in="0"
+          >
+            Title Title Title Title 3
+          </h1>
+          <br />
+          <h3
+            class="animate__animated"
+            data-animation-in="animate__fadeInRight"
+            data-delay-in="0.2"
+          >
+            Content Content Content Content Content Content Content
+          </h3>
+        </div>
+      </div>
+    </div>
     <script type="module" src="js/index.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+      integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"
+      integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="js/slick-animation.min.js"></script>
+    <script>
+      $(".slider")
+        .slick({
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          autoplay: true,
+          autoplaySpeed: 5000,
+          prevArrow:
+            "<button type='button' class='slick-prev pull-left'><i class='bi bi-arrow-left' aria-hidden='true'></i></button>",
+          nextArrow:
+            "<button type='button' class='slick-next pull-right'><i class='bi bi-arrow-right' aria-hidden='true'></i></button>",
+        })
+        .slickAnimation();
+    </script>
   </body>
 </html>

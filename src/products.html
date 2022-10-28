@@ -7,13 +7,77 @@
     <title>Test App</title>
   </head>
   <body>
+    <a href="cart.html">Cart</a>
     <div class="container">
-      <div
-        class="list-fruit-product d-flex justify-content-center align-items-center gap-3 flex-wrap gap-xl-4 gap-xxl-5"
-      ></div>
+      <div class="row">
+        <div class="col-3">
+          <form action="" class="title-category">
+            <p class="fs-20 fw-400">Popular categories</p>
+            <div class="list-category d-flex flex-column gap-3"></div>
+          </form>
+          <br />
+          <div class="pr-search position-relative">
+            <input
+              class="search-box-pr"
+              type="text"
+              name="search-pr"
+              placeholder="Product search..."
+            />
+            <i class="icon bi bi-search position-absolute"></i>
+            <!--  -->
+            <ul class="text-to-search"></ul>
+            <!--  -->
+            <div class="sort-content fs-16 fw-400 position-relative">
+                <select class="sort-price" name="sort">
+                  <option value="default">Sort by</option>
+                  <option value="ascending">Price ascending</option>
+                  <option value="descending">Price descending</option>
+                  <option value="name">Name</option>
+                </select>
+              </div>
+          </div>
+          non
+        </div>
+        <div class="col-9">
+          <div
+            class="list-fruit-product d-flex justify-content-center align-items-center gap-3 flex-wrap gap-xl-4 gap-xxl-5"
+          ></div>
+
+          <!-- nav -->
+          <div class="row">
+            <nav aria-label="Page navigation example">
+              <ul class="pagination justify-content-center"></ul>
+            </nav>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="container"><a href="cart.html">cart</a></div>
+    <!--  -->
+    <script type="text/html" id="search-name">
+      <li><a href="productdetail.html?id=${ id }">${name}</a></li>
+    </script>
+    <!--  -->
+
+    <script type="text/html" id="category-template">
+      <!-- form category -->
+      <div
+        class="form-category d-flex justify-content-between align-items-center"
+      >
+        <div class="d-flex justify-content-center gap-2 align-items-center">
+          <input
+            class="check-category"
+            type="checkbox"
+            name="category"
+            id="checkcate"
+            value="${ category }"
+          />
+          <label>${ category }</label>
+        </div>
+        <div class="number-category">9</div>
+      </div>
+    </script>
 
     <script type="text/html" id="product-pr">
       <!-- product gird -->
